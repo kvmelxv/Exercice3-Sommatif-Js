@@ -1,18 +1,24 @@
 export class AjoutEquipe {
-    
+    #_el;
+    #_elInputNom;
+    #_elInputQuartier;
+    #_elBtn;
+    #_sectionEquipe;
+
+
     constructor(el){
-            this._el = el;
-            this._elInputNom = this._el.nom;
-            this._elInputQuartier = this._el.quartier;
-            this._elBtn = this._el.querySelector('button');
-            this._sectionEquipe = document.querySelector('[data-js-equipes]');
+            this.#_el = el;
+            this.#_elInputNom = this._el.nom;
+            this.#_elInputQuartier = this._el.quartier;
+            this.#_elBtn = this._el.querySelector('button');
+            this.#_sectionEquipe = document.querySelector('[data-js-equipes]');
 
             this.init();
     }
 
     init(){
 
-        this._elBtn.addEventListener('click', function(e){
+        this.#_elBtn.addEventListener('click', function(e){
             e.preventDefault()
             this.ajoutEquipe();  
         }.bind(this))
@@ -22,8 +28,8 @@ export class AjoutEquipe {
 
             let equipe = {
                 
-                nom: this._elInputNom.value,
-                quartier: this._elInputQuartier.value
+                nom: this.#_elInputNom.value,
+                quartier: this.#_elInputQuartier.value
 
             }
 
@@ -55,10 +61,10 @@ export class AjoutEquipe {
 						</div>
 				</form> `;
 
-                this._sectionEquipe.insertAdjacentHTML('beforeend', dom);
+                this.#_sectionEquipe.insertAdjacentHTML('beforeend', dom);
 
-                this._elInputNom.value = '';
-                this._elInputQuartier.value = '';
+                this.#_elInputNom.value = '';
+                this.#_elInputQuartier.value = '';
 
 
             }.bind(this))
