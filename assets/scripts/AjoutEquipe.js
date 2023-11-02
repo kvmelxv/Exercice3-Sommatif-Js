@@ -38,6 +38,7 @@ export class AjoutEquipe {
             fetch('./requetes/ajouteEquipe.php', oOptions)
             .then(function(reponse){
                 if(reponse.ok) return reponse.json()
+                else throw new error('404')
             })
             .then(function(data){
 
