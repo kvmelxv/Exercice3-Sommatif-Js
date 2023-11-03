@@ -9,11 +9,11 @@ export class Equipe {
 
     constructor(el){
         this.#_el = el;
-        this.#_elLabel = this._el.querySelectorAll('label');
-        this.#_elsInput = this._el.nom;
-        this.#_elsBtn = this._el.querySelector('[data-js-actions]');
-        this.#_elsBtnChanger = this._elsBtn.querySelector('[data-js-action="changer"]');
-        this.#_elsBtnSupprimer = this._elsBtn.querySelector('[data-js-action="supprimer"]');
+        this.#_elLabel = this.#_el.querySelectorAll('label');
+        this.#_elsInput = this.#_el.nom;
+        this.#_elsBtn = this.#_el.querySelector('[data-js-actions]');
+        this.#_elsBtnChanger = this.#_elsBtn.querySelector('[data-js-action="changer"]');
+        this.#_elsBtnSupprimer = this.#_elsBtn.querySelector('[data-js-action="supprimer"]');
 
         this.init();
     }

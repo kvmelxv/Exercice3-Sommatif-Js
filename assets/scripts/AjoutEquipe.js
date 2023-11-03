@@ -8,9 +8,9 @@ export class AjoutEquipe {
 
     constructor(el){
             this.#_el = el;
-            this.#_elInputNom = this._el.nom;
-            this.#_elInputQuartier = this._el.quartier;
-            this.#_elBtn = this._el.querySelector('button');
+            this.#_elInputNom = this.#_el.nom;
+            this.#_elInputQuartier = this.#_el.quartier;
+            this.#_elBtn = this.#_el.querySelector('button');
             this.#_sectionEquipe = document.querySelector('[data-js-equipes]');
 
             this.init();
